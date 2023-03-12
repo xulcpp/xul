@@ -10,6 +10,7 @@ find_package(GTest REQUIRED)
 
 add_library(xulpp INTERFACE
   include/xul/stripool.hpp
+  include/xul/macronomicon.hpp
 )
 target_include_directories(xulpp
   INTERFACE
