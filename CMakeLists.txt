@@ -11,6 +11,7 @@ find_package(GTest REQUIRED)
 add_library(xulpp INTERFACE
   include/xul/stripool.hpp
   include/xul/macronomicon.hpp
+  include/xul/variadic.hpp
 )
 target_include_directories(xulpp
   INTERFACE
@@ -18,7 +19,8 @@ target_include_directories(xulpp
 )
 
 add_executable(xulpp_tests
-  test/main.cpp
+  test/test_stripool.cpp
+  test/test_variadic.cpp
 )
 target_link_libraries(xulpp_tests
   PUBLIC

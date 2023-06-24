@@ -72,7 +72,7 @@ bool fillbo_faggins(xul::Stripool& pool, int threadId)
   for (int runs = 0; runs != 1'000'000; ++runs ) {
     char* acq = nullptr;
     while (!acq) {
-      std::this_thread::yield();
+      //std::this_thread::yield();
       acq = pool.acquire(8);
     }
     // Repeatedly fill the acquisition with our thread ID
