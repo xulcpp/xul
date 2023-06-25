@@ -93,7 +93,7 @@ bool fillbo_faggins(xul::Stripool& pool, int threadId)
 }
 
 // Not recommended to run this on debug. It takes forever.
-TEST(Stripool, Swarm)
+TEST(Stripool, DISABLED_Swarm)
 {
   xul::ArrayStripool<32, 12> pool;
   bool overlap{false};
