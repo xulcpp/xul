@@ -9,6 +9,7 @@ enable_testing()
 find_package(GTest REQUIRED)
 
 add_library(xulpp INTERFACE
+  include/xul/fnv_hash.hpp
   include/xul/macronomicon.hpp
   include/xul/metapod.hpp
   include/xul/metapod_json.hpp
@@ -22,10 +23,11 @@ target_include_directories(xulpp
 )
 
 add_executable(xulpp_tests
-  test/test_stripool.cpp
-  test/test_variadic.cpp
+  test/test_fnv_hash.cpp
   test/test_metapod.cpp
   test/test_metapod_json.cpp
+  test/test_stripool.cpp
+  test/test_variadic.cpp
 )
 target_link_libraries(xulpp_tests
   PUBLIC
