@@ -9,6 +9,7 @@ enable_testing()
 find_package(GTest REQUIRED)
 
 add_library(xulpp INTERFACE
+  include/xul/enum.hpp
   include/xul/fnv_hash.hpp
   include/xul/macronomicon.hpp
   include/xul/metapod.hpp
@@ -28,6 +29,7 @@ add_executable(xulpp_tests
   test/test_metapod_json.cpp
   test/test_stripool.cpp
   test/test_variadic.cpp
+  test/test_enum.cpp
 )
 target_link_libraries(xulpp_tests
   PUBLIC
